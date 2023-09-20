@@ -1,20 +1,21 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-const BlockLeftComponent: React.FC = () => {
+const BlockRightComponent: React.FC = () => {
   return (
     <div
-      className="col-start-3 col-span-4
-                        mt-20 rounded-xl relative bg-[#F2E9FA] shadow-xl flex items-center justify-between"
+      className="justify-items-center
+                          col-start-3 col-span-5
+                          mt-20 rounded-xl relative bg-[#F2E9FA] shadow-xl flex items-center justify-between"
     >
       <div
-        className="text-5xl
-                          -right-1 -top-9 absolute bg-white rounded-lg px-2 py-2 font-medium"
+        className="text-6xl text-[#7E2E84]
+                        -top-9 absolute bg-white rounded-lg px-2 py-2 font-medium"
       >
         Flextronics
       </div>
-      <div className="my-4 grid grid-cols-4 content-end gap-2 items-center">
-        <div className="col-span-2 p-3">
+      <div className="my-4 grid grid-cols-4 gap-2 items-center text-xl">
+        <div className="col-span-2 w-fit p-3 font-semibold">
           <div className="my-4 flex justify-start">
             <Icon icon="carbon:user-filled" className="big-icon" />
             <p>Software Developer Intern</p>
@@ -31,11 +32,11 @@ const BlockLeftComponent: React.FC = () => {
           </div>
         </div>
 
-        <div className="col-start-3 col-span-2">
+        <div className="col-start-3">
           <div>
             <div className="flex justify-start">
               <Icon icon="ph:stack-fill" className="big-icon" />
-              <p className="ml-3">Stack</p>
+              <p className="ml-3 font-bold">Stack</p>
             </div>
 
             <ul className="ml-8 pt-2 list-disc">
@@ -49,10 +50,10 @@ const BlockLeftComponent: React.FC = () => {
         <div className="col-span-4 mx-4">
           <div className="mt-5 flex justify-start">
             <Icon icon="ph:briefcase-fill" className="big-icon" />
-            <p className="ml-3">Responsabilities</p>
+            <p className="ml-3 font-bold">Responsabilities</p>
           </div>
 
-          <div className="ml-8">
+          <div className="ml-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             tempora beatae eum facere ipsam ducimus, placeat neque reiciendis
             cum quod, facilis praesentium. Vel a voluptates blanditiis
@@ -64,4 +65,4 @@ const BlockLeftComponent: React.FC = () => {
   );
 };
 
-export default BlockLeftComponent;
+export default BlockRightComponent;

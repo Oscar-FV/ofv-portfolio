@@ -4,9 +4,10 @@
 @tailwind utilities;
 
 .big-icon {
-    font-size: 30px;
+   font-size: 2rem;
+   color: #7C4670
  }
 
  li::marker{
-    color: purple;
+    color: #7E2E84;
  }
