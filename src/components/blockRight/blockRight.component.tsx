@@ -5,7 +5,7 @@ const BlockRightComponent: React.FC = () => {
   return (
     <div
       className="justify-items-center
-                          col-start-4 col-span-8
+                          col-start-6 col-span-4
                           mt-20 rounded-xl relative bg-[#F2E9FA] shadow-xl flex items-center justify-between"
     >
       <div

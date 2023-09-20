@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 const BlockLeftComponent: React.FC = () => {
   return (
     <div
-      className="col-start-2 col-span-8
+      className="col-start-3 col-span-4
                         mt-20 rounded-xl relative bg-[#F2E9FA] shadow-xl flex items-center justify-between"
     >
       <div
@@ -13,7 +13,7 @@ const BlockLeftComponent: React.FC = () => {
       >
         Flextronics
       </div>
-      <div className="my-4 grid grid-cols-4 gap-2 items-center">
+      <div className="my-4 grid grid-cols-4 content-end gap-2 items-center">
         <div className="col-span-2 p-3">
           <div className="my-4 flex justify-start">
             <Icon icon="carbon:user-filled" className="big-icon" />
