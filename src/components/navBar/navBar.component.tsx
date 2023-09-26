@@ -4,7 +4,7 @@ const NavBarComponent: React.FC = () => {
   return (
     <div
       className="flex flex-nowrap justify-end font-semibold
-                  py-5 pl-5 gap-6 pr-20 text-lg"
+                  py-5 pl-5 gap-6 pr-20 text-lg bg-[#DBBBF5]"
     >
       <a href="">About Me</a>
       <a href="">Experience</a>

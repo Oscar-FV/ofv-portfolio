@@ -4,13 +4,13 @@ const TitleAndDescriptionComponent: React.FC = () => {
   return (
     <>
       <div
-        className="text-5xl
+        className="text-6xl text-[#7E2E84]
                 col-start-2 col-span-11 font-semibold"
       >
         Experience
       </div>
       <div
-        className="text-xl
+        className="text-2xl
                     col-start-2 col-span-10 mt-3"
       >
         Currently my experience has consisted of jobs in manufacturing

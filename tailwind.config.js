@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:
+         {
+           'waves_pattern': "url('src/assets/waves-bg.svg')"
+         }
+    },
   },
   plugins: [],
 }
