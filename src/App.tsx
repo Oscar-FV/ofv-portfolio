@@ -6,7 +6,7 @@ import BlockRightComponent from './components/blockRight/blockRight.component';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-[#DBBBF5]">
 
         <NavBarComponent/>
 

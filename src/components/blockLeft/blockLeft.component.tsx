@@ -6,7 +6,7 @@ const BlockRightComponent: React.FC = () => {
     <div
       className="justify-items-center
                           col-start-3 col-span-5
-                          mt-20 rounded-xl relative bg-[#F2E9FA] shadow-xl flex items-center justify-between"
+                          mt-20 rounded-xl relative bg-white shadow-xl flex items-center justify-between"
     >
       <div
         className="text-6xl text-[#7E2E84]

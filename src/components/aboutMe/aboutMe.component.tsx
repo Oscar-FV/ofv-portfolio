@@ -4,12 +4,14 @@ import yop from "../../assets/yop.png";
 const AboutMeComponent: React.FC = () => {
   return (
       <div className="grid grid-cols-8 bg-waves_pattern bg-cover">
-        <div className="col-start-1 col-span-4 flex justify-center items-center mb-10">
+        <div className="flex justify-center col-span-6 lg:col-span-4
+                        items-end mb-20">
           <div className="grid grid-cols-6 text-center">
-            <div className="lg:text-6xl font-bold col-span-6 text-[#7E2E84]">
-              Oscar Flores V.
+            <div className="lg:text-6xl text-4xl font-bold col-span-6 text-white">
+              Oscar Flores
             </div>
-            <div className="lg:text-xl text-white text-justify col-start-2 col-span-4 mt-5">
+            <div className="col-start-2 col-span-4 mt-12 font-semibold
+                            text-xl text-[#ffffff] text-justify">
               "Lorem idivsum dolor sit, amet consectetur adidivisicing elit.
               Odivtio sed asdiveriores veniam ut vel est quibusdam? Odivtio ea
               quibusdam officia quidem tenetur divariatur aut, eius debitis
@@ -17,8 +19,8 @@ const AboutMeComponent: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col-start-5 col-span-4 flex justify-end items-center">
-          <div className="w-[45rem] h-[35rem] flex items-center justify-center">
+        <div className="lg:col-span-4 col-span-2 flex justify-end">
+          <div className="w-[45rem] h-[35rem] flex justify-center items-center lg:items-center">
             <img
               src={yop}
               alt="OscarFlores"
