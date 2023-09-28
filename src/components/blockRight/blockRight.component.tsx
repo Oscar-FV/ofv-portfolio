@@ -16,7 +16,7 @@ function IconUpdate(id: number, open: number) {
       stroke="currentColor"
       className={`${
         id === open ? "rotate-180" : ""
-      } h-5 w-5 transition-transform mt-3`}
+      } h-5 w-5 transition-transform mt-3 text-accent`}
     >
       <path
         strokeLinecap="round"
@@ -37,12 +37,12 @@ const BlockRightComponent: React.FC = () => {
 
   return (
     <div
-      className="col-start-2 col-span-10 rounded-xl shadow-xl bg-white mt-20 relative
+      className="col-start-2 col-span-10 rounded-xl shadow-xl bg-secondary mt-20 relative
                  lg:col-start-4 lg:col-span-7
                  xl:col-start-6 xl:col-span-5"
     >
       <div
-        className="text-5xl text-center font-medium text-[#7E2E84] bg-white rounded-lg py-2
+        className="text-5xl text-center font-medium text-text bg-secondary rounded-lg py-2
                     md:text-left md:-top-9 md:absolute md:px-12"
       >
         Daikin Applied
@@ -55,43 +55,43 @@ const BlockRightComponent: React.FC = () => {
         >
           <div className="my-4 flex flex-wrap">
             <Icon icon="carbon:user-filled" className="big-icon" />
-            <span className="mt-2 ml-2">FullStack Developer Intern</span>
+            <span className="mt-2 ml-2 text-text">FullStack Developer Intern</span>
           </div>
 
           <div className="mb-4 flex flex-wrap">
             <Icon icon="ic:baseline-date-range" className="big-icon" />
-            <span className="mt-2 ml-2">November 2022 - Current</span>
+            <span className="mt-2 ml-2 text-text">November 2022 - Current</span>
           </div>
 
           <div className="mb-4 flex flex-wrap">
             <Icon icon="mdi:location" className="big-icon" />
-            <span className="mt-2 ml-2">Guadalajara, Jalisco (Remote)</span>
+            <span className="mt-2 ml-2 text-text">Guadalajara, Jalisco (Remote)</span>
           </div>
         </div>
         <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3">
           <AccordionHeader onClick={handleAlwaysOpen}>
             <div className="flex justify-start">
               <Icon icon="ph:stack-fill" className="big-icon" />
-              <p className="ml-3">Stack</p>
+              <p className="ml-3 text-text">Stack</p>
             </div>
           </AccordionHeader>
           <AccordionBody>
               <div className="flex flex-wrap justify-center items-center px-4 gap-x-12 gap-y-3">
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:angular-light" className="big-icon" />
-                  <p className="mt-1">Angular</p>
+                  <p className="mt-1 text-text">Angular</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:dotnet" className="big-icon" />
-                  <p className="mt-1">.Net</p>
+                  <p className="mt-1 text-text">.Net</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:typescript" className="big-icon" />
-                  <p className="mt-1">TypeScript</p>
+                  <p className="mt-1 text-text">TypeScript</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="simple-icons:microsoftsqlserver" color="red" className="big-icon" />
-                  <p className="mt-1">MS SQL Server</p>
+                  <p className="mt-1 text-text">MS SQL Server</p>
                 </div>
               </div>
           </AccordionBody>
@@ -100,10 +100,10 @@ const BlockRightComponent: React.FC = () => {
           <AccordionHeader onClick={() => handleOpen(1)}>
             <div className="mt-5 flex justify-start">
               <Icon icon="ph:briefcase-fill" className="big-icon" />
-              <p className="ml-3 font-bold">Responsabilities</p>
+              <p className="ml-3 font-bold text-text">Responsabilities</p>
             </div>
           </AccordionHeader>
-          <AccordionBody>
+          <AccordionBody className="text-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             tempora beatae eum facere ipsam ducimus, placeat neque reiciendis
             cum quod, facilis praesentium. Vel a voluptates blanditiis

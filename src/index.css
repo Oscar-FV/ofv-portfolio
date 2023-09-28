@@ -5,7 +5,7 @@
 
 .big-icon {
    font-size: 2rem;
-   color: #7C4670
+   @apply text-primary;
  }
 
  li::marker{

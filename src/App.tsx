@@ -6,14 +6,9 @@ import BlockRightComponent from './components/blockRight/blockRight.component';
 
 function App() {
   return (
-    <div className="App bg-[#DBBBF5]">
-
-        <NavBarComponent/>
-
-        <AboutMeComponent/>
-
+    <div className="App">
         <div className="grid grid-cols-12 py-20">
-          <TitleAndDescriptionComponent/>
+          {/* <TitleAndDescriptionComponent/> */}
           <BlockRightComponent/>
           <BlockLeftComponent/>
         </div>
