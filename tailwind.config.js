@@ -8,10 +8,15 @@ export default withMT({
         waves_pattern: "url('src/assets/waves-bg.svg')",
       },
       colors: {
-        'text': '#00171F',
+        'body': '#00171F',
         'primary': '#7C4670',
         'secondary': '#EBEBEB',
         'accent': '#927A5D'
+      },
+      fontFamily: {
+        body: ["Poppins-Regular"],
+        subtitles: ["Poppins-semiBold"],
+        titles: ["Poppins-Bold"],
       },
     },
   },

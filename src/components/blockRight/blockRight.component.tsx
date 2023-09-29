@@ -38,60 +38,59 @@ const BlockRightComponent: React.FC = () => {
   return (
     <div
       className="col-start-2 col-span-10 rounded-xl shadow-xl bg-secondary mt-20 relative
-                 lg:col-start-4 lg:col-span-7
-                 xl:col-start-6 xl:col-span-5"
+                 lg:col-start-4 lg:col-span-7"
     >
       <div
-        className="text-5xl text-center font-medium text-text bg-secondary rounded-lg py-2
+        className="text-3xl md:text-5xl text-center font-medium text-body font-subtitles bg-secondary rounded-lg py-3
                     md:text-left md:-top-9 md:absolute md:px-12"
       >
         Daikin Applied
       </div>
-      <div className="lg:flex lg:flex-wrap mt-1 md:mt-6 mx-5
+      <div className="lg:flex lg:flex-wrap mt-1 md:mt-6 mx-10 font-subtitles md:text-md  text-sm
                        xl:justify-around">
         <div
-          className="flex flex-col 
-                     xl:justify-around"
+          className="flex flex-col
+                     lg:justify-center xl:basis-1/2"
         >
-          <div className="my-4 flex flex-wrap">
+          <div className="my-6 flex flex-wrap">
             <Icon icon="carbon:user-filled" className="big-icon" />
-            <span className="mt-2 ml-2 text-text">FullStack Developer Intern</span>
+            <span className="mt-1 ml-2 text-body">FullStack Developer Intern</span>
           </div>
 
-          <div className="mb-4 flex flex-wrap">
+          <div className="mb-6 flex flex-wrap">
             <Icon icon="ic:baseline-date-range" className="big-icon" />
-            <span className="mt-2 ml-2 text-text">November 2022 - Current</span>
+            <span className="mt-1 ml-2 text-body">November 2022 - Current</span>
           </div>
 
-          <div className="mb-4 flex flex-wrap">
+          <div className="mb-6 flex flex-wrap">
             <Icon icon="mdi:location" className="big-icon" />
-            <span className="mt-2 ml-2 text-text">Guadalajara, Jalisco (Remote)</span>
+            <span className="mt-1 ml-2 text-body">Guadalajara, Jalisco (Remote)</span>
           </div>
         </div>
-        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3">
+        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/2">
           <AccordionHeader onClick={handleAlwaysOpen}>
             <div className="flex justify-start">
               <Icon icon="ph:stack-fill" className="big-icon" />
-              <p className="ml-3 text-text">Stack</p>
+              <p className="ml-3 text-body  md:text-xl text-sm font-subtitles ">Stack</p>
             </div>
           </AccordionHeader>
           <AccordionBody>
-              <div className="flex flex-wrap justify-center items-center px-4 gap-x-12 gap-y-3">
+              <div className="flex flex-wrap font-body justify-around items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:angular-light" className="big-icon" />
-                  <p className="mt-1 text-text">Angular</p>
+                  <p className="mt-1 text-body">Angular</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:dotnet" className="big-icon" />
-                  <p className="mt-1 text-text">.Net</p>
+                  <p className="mt-1 text-body">.Net</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:typescript" className="big-icon" />
-                  <p className="mt-1 text-text">TypeScript</p>
+                  <p className="mt-1 text-body">TypeScript</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="simple-icons:microsoftsqlserver" color="red" className="big-icon" />
-                  <p className="mt-1 text-text">MS SQL Server</p>
+                  <p className="mt-1 text-body">MS SQL Server</p>
                 </div>
               </div>
           </AccordionBody>
@@ -100,10 +99,10 @@ const BlockRightComponent: React.FC = () => {
           <AccordionHeader onClick={() => handleOpen(1)}>
             <div className="mt-5 flex justify-start">
               <Icon icon="ph:briefcase-fill" className="big-icon" />
-              <p className="ml-3 font-bold text-text">Responsabilities</p>
+              <p className="ml-3 font-bold text-body lg:text-xl text-sm font-subtitles">Responsabilities</p>
             </div>
           </AccordionHeader>
-          <AccordionBody className="text-text">
+          <AccordionBody className="text-body font-body">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             tempora beatae eum facere ipsam ducimus, placeat neque reiciendis
             cum quod, facilis praesentium. Vel a voluptates blanditiis
