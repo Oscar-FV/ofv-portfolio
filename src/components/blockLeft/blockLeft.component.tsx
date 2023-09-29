@@ -16,7 +16,7 @@ function IconUpdate(id: number, open: number) {
       stroke="currentColor"
       className={`${
         id === open ? "rotate-180" : ""
-      } h-5 w-5 transition-transform mt-3`}
+      } h-5 w-5 transition-transform mt-3 text-accent`}
     >
       <path
         strokeLinecap="round"
@@ -37,73 +37,67 @@ const BlockRightComponent: React.FC = () => {
 
   return (
     <div
-      className="col-start-2 col-span-10 rounded-xl shadow-xl bg-white mt-20 relative
-                 lg:col-start-4 lg:col-span-7
-                 xl:col-start-2 xl:col-span-5"
+      className="col-start-2 col-span-10 rounded-xl shadow-lg shadow-accent-900/50 bg-secondary mt-20 relative lg:col-start-3 lg:col-span-7"
     >
       <div
-        className="text-5xl text-center font-medium text-[#7E2E84] bg-white rounded-lg py-2
-                    md:text-left md:-top-9 md:absolute md:px-12"
+        className="tracking-wider text-3xl md:text-5xl text-center font-medium text-primary-900 font-titles bg-secondary rounded-lg py-3 md:text-left md:-top-9 md:right-0 md:absolute md:px-12"
       >
         Daikin Applied
       </div>
-      <div className="lg:flex lg:flex-wrap mt-1 md:mt-6 mx-5
-                       xl:justify-around">
-        <div
-          className="flex flex-col 
-                     xl:justify-around"
-        >
-          <div className="my-4 flex flex-wrap">
-            <Icon icon="carbon:user-filled" className="big-icon" />
-            <span className="mt-2 ml-2">FullStack Developer Intern</span>
+      <div className="lg:flex lg:flex-wrap mt-1 md:mt-6 mx-6 lg:mx-3 2xl:mx-8 font-subtitles md:text-md xl:text-lg 2xl:text-xl text-sm xl:justify-around">
+      <div className="flex flex-col lg:justify-center xl:order-2">
+          <div className="my-6 flex flex-wrap items-center">
+            <Icon icon="carbon:user-filled" className="md:big-icon small-icon" />
+            <span className="mt-1 ml-2 text-body">FullStack Developer Intern</span>
           </div>
 
-          <div className="mb-4 flex flex-wrap">
-            <Icon icon="ic:baseline-date-range" className="big-icon" />
-            <span className="mt-2 ml-2">November 2022 - Current</span>
+          <div className="mb-6 flex flex-wrap items-center">
+            <Icon icon="ic:baseline-date-range" className="md:big-icon small-icon" />
+            <span className="mt-1 ml-2 text-body">November 2022 - Current</span>
           </div>
 
-          <div className="mb-4 flex flex-wrap">
-            <Icon icon="mdi:location" className="big-icon" />
-            <span className="mt-2 ml-2">Guadalajara, Jalisco (Remote)</span>
+          <div className="mb-6 flex flex-wrap items-center">
+            <Icon icon="mdi:location" className="md:big-icon small-icon" />
+            <span className="mt-1 ml-2 text-body">Guadalajara, Jalisco<span className="text-accent-900 font-body text-sm">(Remote)</span></span>
           </div>
         </div>
-        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3">
+        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/2 xl:order-1">
           <AccordionHeader onClick={handleAlwaysOpen}>
-            <div className="flex justify-start">
-              <Icon icon="ph:stack-fill" className="big-icon" />
-              <p className="ml-3">Stack</p>
+            <div className="flex justify-start items-center">
+              <Icon icon="ph:stack-fill" className="md:big-icon small-icon" />
+              <p className="ml-3 text-body  md:text-md xl:text-lg 2xl:text-xl text-sm font-subtitles ">Stack</p>
             </div>
           </AccordionHeader>
           <AccordionBody>
-              <div className="flex flex-wrap justify-center items-center px-4 gap-x-12 gap-y-3">
+              <div className="flex flex-wrap font-body justify-around items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:angular-light" className="big-icon" />
-                  <p className="mt-1">Angular</p>
+                  <p className="text-body xl:text-lg">Angular</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:dotnet" className="big-icon" />
-                  <p className="mt-1">.Net</p>
+                  <p className="text-body xl:text-lg">.Net</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:typescript" className="big-icon" />
-                  <p className="mt-1">TypeScript</p>
+                  <p className="text-body xl:text-lg">TypeScript</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <Icon icon="simple-icons:microsoftsqlserver" color="red" className="big-icon" />
-                  <p className="mt-1">MS SQL Server</p>
+                  <p className="text-body xl:text-lg">MS SQL Server</p>
                 </div>
               </div>
           </AccordionBody>
         </Accordion>
-        <Accordion open={open === 1} icon={IconUpdate(1, open)} className="xl:px-12 pb-10">
+        
+        <Accordion open={open === 1} icon={IconUpdate(1, open)} className="xl:px-12 pb-10 xl:order-3">
           <AccordionHeader onClick={() => handleOpen(1)}>
-            <div className="mt-5 flex justify-start">
-              <Icon icon="ph:briefcase-fill" className="big-icon" />
-              <p className="ml-3 font-bold">Responsabilities</p>
+            <div className="mt-5 flex justify-start items-center">
+              <Icon icon="ph:briefcase-fill" className="md:big-icon small-icon" />
+              <p className="ml-3 text-body md:text-md xl:text-lg 2xl:text-xl text-sm font-subtitles">Responsabilities</p>
             </div>
           </AccordionHeader>
-          <AccordionBody>
+          <AccordionBody className="text-body font-body xl:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             tempora beatae eum facere ipsam ducimus, placeat neque reiciendis
             cum quod, facilis praesentium. Vel a voluptates blanditiis

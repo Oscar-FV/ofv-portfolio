@@ -4,7 +4,12 @@
 
 .big-icon {
    font-size: 2rem;
-   @apply text-accent;
+   @apply text-primary-900;
+ }
+
+ .small-icon {
+   font-size: 1.7rem;
+   @apply text-primary-900;
  }
 
  li::marker{

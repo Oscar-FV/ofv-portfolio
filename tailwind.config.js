@@ -9,9 +9,15 @@ export default withMT({
       },
       colors: {
         'body': '#00171F',
-        'primary': '#7C4670',
+        'primary': {
+                    50: '#BD89B2',
+                    900: '#7C4670'
+                  },
         'secondary': '#EBEBEB',
-        'accent': '#927A5D'
+        'accent': {
+                    50: '#DFD6CD',
+                    900: '#927A5D'
+                  }
       },
       fontFamily: {
         body: ["Poppins-Regular"],
