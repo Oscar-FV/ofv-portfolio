@@ -1,34 +1,38 @@
 import React from "react";
 import yop from "../../assets/yop.png";
+import { Button, Typography } from "@material-tailwind/react";
 
 const AboutMeComponent: React.FC = () => {
   return (
-      <div className="grid grid-cols-8 bg-waves_pattern bg-cover">
-        <div className="flex justify-center col-span-6 lg:col-span-4
-                        items-end mb-20">
-          <div className="grid grid-cols-6 text-center">
-            <div className="lg:text-6xl text-4xl font-bold col-span-6 text-white">
-              Oscar Flores
-            </div>
-            <div className="col-start-2 col-span-4 mt-12 font-semibold
-                            text-xl text-[#ffffff] text-justify">
-              "Lorem idivsum dolor sit, amet consectetur adidivisicing elit.
-              Odivtio sed asdiveriores veniam ut vel est quibusdam? Odivtio ea
-              quibusdam officia quidem tenetur divariatur aut, eius debitis
-              laboriosam diversdiviciatis at rerum."
-            </div>
+
+    <>
+      <div className="flex flex-nowrap justify-start bg-secondary pb-auto">
+          <div className="flex flex-col items-center justify-top text-center pl-6 mt-6">
+            <p className="font-titles text-body text-xl">Oscar Flores</p>
+            <p className="font-subtitles text-sm text-primary-900">Full Stack Developer</p>
+            <Button size="sm" variant="outlined" className="w-fit mt-5 font-body border-primary-900 text-primary-900">Contact Me</Button>
           </div>
-        </div>
-        <div className="lg:col-span-4 col-span-2 flex justify-end">
-          <div className="w-[45rem] h-[35rem] flex justify-center items-center lg:items-center">
-            <img
+          <img
               src={yop}
               alt="OscarFlores"
-              className="w-[30rem] mt-10 drop-shadow-[0_14px_8px_rgba(0,0,0,0.40)]"
-            />
-          </div>
-        </div>
+              className="w-[8rem] ml-3"
+          />
       </div>
+      <div className="mx-5">
+          <p className="font-titles text-primary-900 underline underline-offset-4 decoration-3  decoration-accent-900 text-xl my-3">About</p>
+          <Typography variant="small" className="font-body text-body text-xs">
+          Material Tailwind is an easy to use components library for Tailwind CSS
+          and Material Design. It provides a simple way to customize your
+          components, you can change the colors, fonts, breakpoints and everything
+          you need.
+          </Typography>
+          <div className="flex justify-end">
+            <Button size="sm" ripple={true} variant="filled" className="w-fit mt-5 font-body bg-secondary border-secondary text-accent-900">Download Resume</Button>
+          </div>
+          
+      </div>
+    </>
+      
   );
 };
 

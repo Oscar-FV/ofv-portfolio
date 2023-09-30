@@ -52,8 +52,8 @@ const BlockRightComponent: React.FC = () => {
           </div>
 
           <div className="mb-6 flex flex-wrap items-center">
-            <Icon icon="ic:baseline-date-range" className="md:big-icon small-icon" />
-            <span className="mt-1 ml-2 text-body">November 2022 - Current</span>
+            <Icon icon="ic:baseline-date-range" className="md:big-icon small-icon" />    
+            <span className="mt-1 ml-2 text-body">November 2022 - November 2022</span>    
           </div>
 
           <div className="mb-6 flex flex-wrap items-center">
@@ -61,7 +61,8 @@ const BlockRightComponent: React.FC = () => {
             <span className="mt-1 ml-2 text-body">Guadalajara, Jalisco<span className="text-accent-900 font-body text-sm">(Remote)</span></span>
           </div>
         </div>
-        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/2 xl:order-1">
+        {/* recordatorio, si el componente recive fecha final cambiar el basis xl:1/2 a xl:1/3 */}
+        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3 xl:order-1">
           <AccordionHeader onClick={handleAlwaysOpen}>
             <div className="flex justify-start items-center">
               <Icon icon="ph:stack-fill" className="md:big-icon small-icon" />

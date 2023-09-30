@@ -7,13 +7,16 @@ import BlockRightComponent from './components/blockRight/blockRight.component';
 function App() {
   return (
     <div className="App">
-        <div className="grid grid-cols-12 py-20">
-          {/* <TitleAndDescriptionComponent/> */}
-          <BlockRightComponent/>
-          <BlockLeftComponent/>
-        </div>
 
-      </div>
+        <AboutMeComponent />
+
+        {/* <div className="grid grid-cols-12 py-20"> */}
+          {/* <TitleAndDescriptionComponent/> */}
+          {/* <BlockRightComponent/>
+          <BlockLeftComponent/>
+        </div> */}
+
+    </div>
   );
 }
 
