@@ -1,32 +1,38 @@
 import React from "react";
 import yop from "../../assets/yop.png";
+import { Button } from "@material-tailwind/react";
 
 const AboutMeComponent: React.FC = () => {
   return (
-      <div className="grid grid-cols-8 bg-waves_pattern bg-cover">
-        <div className="col-start-1 col-span-4 flex justify-center items-center mb-10">
-          <div className="grid grid-cols-6 text-center">
-            <div className="lg:text-6xl font-bold col-span-6 text-[#7E2E84]">
-              Oscar Flores V.
-            </div>
-            <div className="lg:text-xl text-white text-justify col-start-2 col-span-4 mt-5">
-              "Lorem idivsum dolor sit, amet consectetur adidivisicing elit.
-              Odivtio sed asdiveriores veniam ut vel est quibusdam? Odivtio ea
-              quibusdam officia quidem tenetur divariatur aut, eius debitis
-              laboriosam diversdiviciatis at rerum."
-            </div>
-          </div>
+    <>
+      <div
+        className="flex flex-nowrap justify-start bg-presentation bg-cover pb-auto">
+        <div className="flex flex-col items-center text-center mx-3
+                        justify-center sm:px-16 xl:pl-24 2xl:mx-42">
+          <p
+            className="font-titles text-3xl bg-gradient-to-t from-body via-primary-900 to-primary-50  bg-clip-text text-transparent
+                       md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+          >
+            Oscar Flores
+          </p>
+          <p
+            className="font-subtitles text-lg bg-gradient-to-t from-primary-900 to-primary-50  bg-clip-text text-transparent
+                          md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
+          >
+            FullStack Developer
+          </p>
+          <Button
+            size="sm"
+            variant="gradient"
+            className="mt-5 font-body border-primary-900 bg-gradient-to-t from-primary-900 to-primary-50 text-secondary capitalize lg:text-lg"
+          >
+            Contact Me
+          </Button>
         </div>
-        <div className="col-start-5 col-span-4 flex justify-end items-center">
-          <div className="w-[45rem] h-[35rem] flex items-center justify-center">
-            <img
-              src={yop}
-              alt="OscarFlores"
-              className="w-[30rem] mt-10 drop-shadow-[0_14px_8px_rgba(0,0,0,0.40)]"
-            />
-          </div>
-        </div>
+        <img src={yop} alt="OscarFlores" className="w-[8rem] md:w-[12rem] lg:w-[15rem] xl:w-[18rem] 
+                                                    2xl:w-[22rem]"/>
       </div>
+    </>
   );
 };
 

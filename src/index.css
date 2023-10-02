@@ -1,13 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .big-icon {
    font-size: 2rem;
-   color: #7C4670
+   @apply text-primary-900;
+ }
+
+ .small-icon {
+   font-size: 1.7rem;
+   @apply text-primary-900;
  }
 
  li::marker{
     color: #7E2E84;
  }
+
+@font-face {
+   font-family: Poppins-Regular;
+   src: url('/src/assets/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+   font-family: Poppins-semiBold;
+   src: url('/src/assets/fonts/Poppins-SemiBold.ttf');
+}
+@font-face {
+   font-family: Poppins-Bold;
+   src: url('/src/assets/fonts/Poppins-Bold.ttf');
+}

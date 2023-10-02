@@ -1,65 +1,110 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+
+function IconUpdate(id: number, open: number) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className={`${
+        id === open ? "rotate-180" : ""
+      } h-5 w-5 transition-transform mt-3 text-accent`}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+  );
+}
 
 const BlockRightComponent: React.FC = () => {
+  const [open, setOpen] = React.useState(0);
+  const [alwaysOpen, setAlwaysOpen] = React.useState(true);
+
+  const handleAlwaysOpen = () => setAlwaysOpen((cur) => !cur);
+  const handleOpen = (value: React.SetStateAction<number>) =>
+    setOpen(open === value ? 0 : value);
+
   return (
     <div
-      className="justify-items-center
-                          col-start-3 col-span-5
-                          mt-20 rounded-xl relative bg-[#F2E9FA] shadow-xl flex items-center justify-between"
+      className="col-start-2 col-span-10 rounded-xl shadow-lg shadow-accent-900/50 bg-secondary mt-20 relative lg:col-start-3 lg:col-span-7"
     >
       <div
-        className="text-6xl text-[#7E2E84]
-                        -top-9 absolute bg-white rounded-lg px-2 py-2 font-medium"
+        className="tracking-wider text-3xl md:text-5xl text-center font-medium text-primary-900 font-titles bg-secondary rounded-lg py-3 md:text-left md:-top-9 md:right-0 md:absolute md:px-12"
       >
-        Flextronics
+        Daikin Applied
       </div>
-      <div className="my-4 grid grid-cols-4 gap-2 items-center text-xl">
-        <div className="col-span-2 w-fit p-3 font-semibold">
-          <div className="my-4 flex justify-start">
-            <Icon icon="carbon:user-filled" className="big-icon" />
-            <p>Software Developer Intern</p>
+      <div className="lg:flex lg:flex-wrap mt-1 md:mt-6 mx-6 lg:mx-3 2xl:mx-8 font-subtitles md:text-md xl:text-lg 2xl:text-xl text-sm xl:justify-around">
+      <div className="flex flex-col lg:justify-center xl:order-2">
+          <div className="my-6 flex flex-wrap items-center">
+            <Icon icon="carbon:user-filled" className="md:big-icon small-icon" />
+            <span className="mt-1 ml-2 text-body">FullStack Developer Intern</span>
           </div>
 
-          <div className="my-4 flex justify-start">
-            <Icon icon="ic:baseline-date-range" className="big-icon" />
-            <p>November 2022 - Current</p>
+          <div className="mb-6 flex flex-wrap items-center">
+            <Icon icon="ic:baseline-date-range" className="md:big-icon small-icon" />    
+            <span className="mt-1 ml-2 text-body">November 2022 - November 2022</span>    
           </div>
 
-          <div className="my-4 flex justify-start">
-            <Icon icon="mdi:location" className="big-icon" />
-            <p>Guadalajara, Jalisco (Remote)</p>
+          <div className="mb-6 flex flex-wrap items-center">
+            <Icon icon="mdi:location" className="md:big-icon small-icon" />
+            <span className="mt-1 ml-2 text-body">Guadalajara, Jalisco<span className="text-accent-900 font-body text-sm">(Remote)</span></span>
           </div>
         </div>
-
-        <div className="col-start-3">
-          <div>
-            <div className="flex justify-start">
-              <Icon icon="ph:stack-fill" className="big-icon" />
-              <p className="ml-3 font-bold">Stack</p>
+        {/* recordatorio, si el componente recive fecha final cambiar el basis xl:1/2 a xl:1/3 */}
+        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3 xl:order-1">
+          <AccordionHeader onClick={handleAlwaysOpen}>
+            <div className="flex justify-start items-center">
+              <Icon icon="ph:stack-fill" className="md:big-icon small-icon" />
+              <p className="ml-3 text-body  md:text-md xl:text-lg 2xl:text-xl text-sm font-subtitles ">Stack</p>
             </div>
-
-            <ul className="ml-8 pt-2 list-disc">
-              <li>Angular</li>
-              <li>TypeScript</li>
-              <li>.Net</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-span-4 mx-4">
-          <div className="mt-5 flex justify-start">
-            <Icon icon="ph:briefcase-fill" className="big-icon" />
-            <p className="ml-3 font-bold">Responsabilities</p>
-          </div>
-
-          <div className="ml-10">
+          </AccordionHeader>
+          <AccordionBody>
+              <div className="flex flex-wrap font-body justify-around items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
+                <div className="flex flex-col items-center">
+                  <Icon icon="skill-icons:angular-light" className="big-icon" />
+                  <p className="text-body xl:text-lg">Angular</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Icon icon="skill-icons:dotnet" className="big-icon" />
+                  <p className="text-body xl:text-lg">.Net</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Icon icon="skill-icons:typescript" className="big-icon" />
+                  <p className="text-body xl:text-lg">TypeScript</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Icon icon="simple-icons:microsoftsqlserver" color="red" className="big-icon" />
+                  <p className="text-body xl:text-lg">MS SQL Server</p>
+                </div>
+              </div>
+          </AccordionBody>
+        </Accordion>
+        
+        <Accordion open={open === 1} icon={IconUpdate(1, open)} className="xl:px-12 pb-10 xl:order-3">
+          <AccordionHeader onClick={() => handleOpen(1)}>
+            <div className="mt-5 flex justify-start items-center">
+              <Icon icon="ph:briefcase-fill" className="md:big-icon small-icon" />
+              <p className="ml-3 text-body md:text-md xl:text-lg 2xl:text-xl text-sm font-subtitles">Responsabilities</p>
+            </div>
+          </AccordionHeader>
+          <AccordionBody className="text-body font-body xl:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             tempora beatae eum facere ipsam ducimus, placeat neque reiciendis
             cum quod, facilis praesentium. Vel a voluptates blanditiis
             praesentium nesciunt ullam quis?
-          </div>
-        </div>
+          </AccordionBody>
+        </Accordion>
       </div>
     </div>
   );

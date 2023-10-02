@@ -8,17 +8,15 @@ function App() {
   return (
     <div className="App">
 
-        <NavBarComponent/>
+        <AboutMeComponent />
+        <TitleAndDescriptionComponent/>
 
-        <AboutMeComponent/>
-
-        <div className="grid grid-cols-12 py-20">
-          <TitleAndDescriptionComponent/>
+        {/* <div className="grid grid-cols-12 py-20">
           <BlockRightComponent/>
           <BlockLeftComponent/>
-        </div>
+        </div> */}
 
-      </div>
+    </div>
   );
 }
 
