@@ -6,6 +6,7 @@ export default withMT({
     extend: {
       backgroundImage: {
         waves_pattern: "url('src/assets/waves-bg.svg')",
+        presentation: "url('src/assets/bgPresentation.jpg')"
       },
       colors: {
         'body': '#00171F',

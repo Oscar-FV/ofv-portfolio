@@ -9,10 +9,10 @@ function App() {
     <div className="App">
 
         <AboutMeComponent />
+        <TitleAndDescriptionComponent/>
 
-        {/* <div className="grid grid-cols-12 py-20"> */}
-          {/* <TitleAndDescriptionComponent/> */}
-          {/* <BlockRightComponent/>
+        {/* <div className="grid grid-cols-12 py-20">
+          <BlockRightComponent/>
           <BlockLeftComponent/>
         </div> */}
 

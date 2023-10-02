@@ -1,38 +1,38 @@
 import React from "react";
 import yop from "../../assets/yop.png";
-import { Button, Typography } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 
 const AboutMeComponent: React.FC = () => {
   return (
-
     <>
-      <div className="flex flex-nowrap justify-start bg-secondary pb-auto">
-          <div className="flex flex-col items-center justify-top text-center pl-6 mt-6">
-            <p className="font-titles text-body text-xl">Oscar Flores</p>
-            <p className="font-subtitles text-sm text-primary-900">Full Stack Developer</p>
-            <Button size="sm" variant="outlined" className="w-fit mt-5 font-body border-primary-900 text-primary-900">Contact Me</Button>
-          </div>
-          <img
-              src={yop}
-              alt="OscarFlores"
-              className="w-[8rem] ml-3"
-          />
-      </div>
-      <div className="mx-5">
-          <p className="font-titles text-primary-900 underline underline-offset-4 decoration-3  decoration-accent-900 text-xl my-3">About</p>
-          <Typography variant="small" className="font-body text-body text-xs">
-          Material Tailwind is an easy to use components library for Tailwind CSS
-          and Material Design. It provides a simple way to customize your
-          components, you can change the colors, fonts, breakpoints and everything
-          you need.
-          </Typography>
-          <div className="flex justify-end">
-            <Button size="sm" ripple={true} variant="filled" className="w-fit mt-5 font-body bg-secondary border-secondary text-accent-900">Download Resume</Button>
-          </div>
-          
+      <div
+        className="flex flex-nowrap justify-start bg-presentation bg-cover pb-auto">
+        <div className="flex flex-col items-center text-center mx-3
+                        justify-center sm:px-16 xl:pl-24 2xl:mx-42">
+          <p
+            className="font-titles text-3xl bg-gradient-to-t from-body via-primary-900 to-primary-50  bg-clip-text text-transparent
+                       md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+          >
+            Oscar Flores
+          </p>
+          <p
+            className="font-subtitles text-lg bg-gradient-to-t from-primary-900 to-primary-50  bg-clip-text text-transparent
+                          md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
+          >
+            FullStack Developer
+          </p>
+          <Button
+            size="sm"
+            variant="gradient"
+            className="mt-5 font-body border-primary-900 bg-gradient-to-t from-primary-900 to-primary-50 text-secondary capitalize lg:text-lg"
+          >
+            Contact Me
+          </Button>
+        </div>
+        <img src={yop} alt="OscarFlores" className="w-[8rem] md:w-[12rem] lg:w-[15rem] xl:w-[18rem] 
+                                                    2xl:w-[22rem]"/>
       </div>
     </>
-      
   );
 };
 
