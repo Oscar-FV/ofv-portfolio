@@ -5,7 +5,7 @@ export default withMT({
   theme: {
     extend: {
       backgroundImage: {
-        presentation: "url('src/assets/presentation-bg.png')"
+        presentation: "url('src/assets/presentation-bg.svg')"
       },
       colors: {
         'body': '#00171F',
