@@ -10,13 +10,13 @@ const AboutMeComponent: React.FC = () => {
         <div className="flex flex-col items-center text-center mx-3
                         justify-center sm:px-16 xl:pl-24 2xl:mx-42">
           <p
-            className="font-titles text-3xl bg-gradient-to-t from-body via-primary-900 to-primary-50  bg-clip-text text-transparent
-                       md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+            className="tracking-wide font-titles text-3xl text-body
+                       md:text-5xl lg:text-6xl 2xl:text-8xl"
           >
             Oscar Flores
           </p>
           <p
-            className="font-subtitles text-lg bg-gradient-to-t from-primary-900 to-primary-50  bg-clip-text text-transparent
+            className="tracking-wide font-subtitles text-lg bg-gradient-to-t from-primary-900 to-primary-50  bg-clip-text text-transparent
                           md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
           >
             FullStack Developer
@@ -29,7 +29,7 @@ const AboutMeComponent: React.FC = () => {
             Contact Me
           </Button>
         </div>
-        <img src={yop} alt="OscarFlores" className="w-[8rem] md:w-[12rem] lg:w-[15rem] xl:w-[18rem] 
+        <img src={yop} alt="OscarFlores" className="w-[8rem] md:w-[12rem] lg:w-[13rem]
                                                     2xl:w-[22rem]"/>
       </div>
     </>
