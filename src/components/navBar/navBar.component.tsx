@@ -1,8 +1,7 @@
 import React from "react";
 import {
   Drawer,
-  Typography,
-  IconButton,
+  IconButton ,
 } from "@material-tailwind/react";
 import { Icon } from '@iconify/react';
 
@@ -14,42 +13,30 @@ const NavBarComponent: React.FC = () => {
   const [openTop, setOpenTop] = React.useState(false);
   return (
     <>
-      <div className="flex flex-nowrap justify-between items-center p-1 sticky top-0">
-        <p>Aquí va un logo culo</p>
+      <div className="flex flex-nowrap justify-between items-center py-4 px-4 sticky top-0 bg-white z-10">
+        <p className="font-body text-body text-lg flex items-center"> <span className="text-primary-900 text-4xl">&lt;</span> OFV <span className="text-primary-900 text-4xl">&gt;</span></p>
+        <IconButton  size="sm" variant="text" onClick={openDrawerTop}>
+          <Icon icon="iconamoon:menu-kebab-horizontal" className="text-body text-3xl" />
+        </IconButton >
+      </div>
 
-        <IconButton size="sm" variant="text" onClick={openDrawerTop} className="">
-          <Icon icon="iconamoon:menu-kebab-horizontal" className="text-body text-lg" />
-        </IconButton>
-        <Drawer
+      <Drawer
           placement="top"
           open={openTop}
           onClose={closeDrawerTop}
-          className="p-4"
-          size={80}
+          className="items-center pt-4"
+          size={120}
         >
-          <div className="mb-6 flex items-center justify-between">
-            <Typography variant="h5" color="blue-gray">
-              Drawer on Top
-            </Typography>
-            <IconButton variant="text" color="blue-gray" onClick={closeDrawerTop}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </IconButton>
-          </div>
-        </Drawer>
-      </div>
+          <div className="flex flex-col items-center gap-y-2">
+            <p className="font-body text-body text-lg flex items-center"> <span className="text-primary-900 text-4xl">&lt;</span> OFV <span className="text-primary-900 text-4xl">&gt;</span></p>
+          <div className="flex flex-row gap-x-6 font-body">
+            <button  className="navItemSelected">About Me</button>
+            <button  className="navItem">Skills</button>
+            <button  className="navItem">Experience</button>
+            <button  className="navItem">Projects</button>
+          </div></div>
+          
+      </Drawer>
       
     </>
   );

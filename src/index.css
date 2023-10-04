@@ -16,6 +16,14 @@
     color: #7E2E84;
  }
 
+ .navItem{
+   @apply text-accent-900 decoration-accent-900 decoration-2 underline-offset-4
+ }
+
+ .navItemSelected{
+   @apply underline font-subtitles text-primary-900 decoration-accent-900 decoration-2 underline-offset-2
+ }
+
 @font-face {
    font-family: Poppins-Regular;
    src: url('/src/assets/fonts/Poppins-Regular.ttf');

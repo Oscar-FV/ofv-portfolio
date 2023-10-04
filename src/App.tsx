@@ -12,7 +12,7 @@ function App() {
         <AboutMeComponent />
         <TitleAndDescriptionComponent/>
 
-        <div className="grid grid-cols-12 py-20">
+        <div className="grid grid-cols-12 ">
           <BlockRightComponent/>
           <BlockLeftComponent/>
         </div>
