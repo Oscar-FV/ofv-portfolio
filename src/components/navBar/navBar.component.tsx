@@ -5,18 +5,17 @@ import {
 } from "@material-tailwind/react";
 import { Icon } from '@iconify/react';
 
-const NavBarComponent: React.FC = () => {
+const NavBar: React.FC = () => {
   const openDrawerTop = () => setOpenTop(true);
   const closeDrawerTop = () => setOpenTop(false);
-
-  
   const [openTop, setOpenTop] = React.useState(false);
+  
   return (
     <>
       <div className="flex flex-nowrap justify-between items-center py-4 px-4 sticky top-0 bg-white z-10">
         <p className="font-body text-body text-lg flex items-center"> <span className="text-primary-900 text-4xl">&lt;</span> OFV <span className="text-primary-900 text-4xl">&gt;</span></p>
         <IconButton  size="sm" variant="text" onClick={openDrawerTop}>
-          <Icon icon="iconamoon:menu-kebab-horizontal" className="text-body text-3xl" />
+          <Icon icon="mingcute:menu-fill" className="text-body text-xl" />
         </IconButton >
       </div>
 
@@ -42,4 +41,4 @@ const NavBarComponent: React.FC = () => {
   );
 };
 
-export default NavBarComponent;
+export default NavBar;
