@@ -42,20 +42,18 @@ const BlockRightComponent: React.FC = () => {
       <div
         className="tracking-wider text-3xl md:text-5xl text-center font-medium text-primary-900 font-titles bg-secondary rounded-lg py-3 md:text-left md:-top-9 md:absolute md:px-12"
       >
-        Flextronics
+        Daikin Applied
       </div>
       <div className="lg:flex lg:flex-wrap mt-1 md:mt-6 mx-6 lg:mx-3 2xl:mx-8 font-subtitles md:text-md xl:text-lg 2xl:text-xl text-sm xl:justify-around">
-      <div
-          className="flex flex-col lg:justify-center"
-        >
+      <div className="flex flex-col lg:justify-center">
           <div className="my-6 flex flex-wrap items-center">
             <Icon icon="carbon:user-filled" className="md:big-icon small-icon" />
             <span className="mt-1 ml-2 text-body">FullStack Developer Intern</span>
           </div>
 
           <div className="mb-6 flex flex-wrap items-center">
-            <Icon icon="ic:baseline-date-range" className="md:big-icon small-icon" />
-            <span className="mt-1 ml-2 text-body">November 2022 - Current</span>
+            <Icon icon="ic:baseline-date-range" className="md:big-icon small-icon" />    
+            <span className="mt-1 ml-2 text-body">November 2022 - Current</span>    
           </div>
 
           <div className="mb-6 flex flex-wrap items-center">
@@ -63,7 +61,7 @@ const BlockRightComponent: React.FC = () => {
             <span className="mt-1 ml-2 text-body">Guadalajara, Jalisco<span className="text-accent-900 font-body text-sm">(Remote)</span></span>
           </div>
         </div>
-        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/2">
+        <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3">
           <AccordionHeader onClick={handleAlwaysOpen}>
             <div className="flex justify-start items-center">
               <Icon icon="ph:stack-fill" className="md:big-icon small-icon" />
@@ -71,28 +69,28 @@ const BlockRightComponent: React.FC = () => {
             </div>
           </AccordionHeader>
           <AccordionBody>
-              <div className="flex flex-wrap font-body justify-around items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
+              <div className="flex flex-wrap font-body justify-center items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
                 <div className="flex flex-col items-center">
-                  <Icon icon="skill-icons:angular-light" className="big-icon" />
-                  <p className="text-body xl:text-lg">Angular</p>
+                  <Icon icon="skill-icons:angular-light" className="text-2xl" />
+                  <p className="text-body xl:text-base">Angular</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Icon icon="skill-icons:dotnet" className="big-icon" />
-                  <p className="text-body xl:text-lg">.Net</p>
+                  <Icon icon="skill-icons:dotnet" className="text-2xl" />
+                  <p className="text-body xl:text-base">.Net</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Icon icon="skill-icons:typescript" className="big-icon" />
-                  <p className="text-body xl:text-lg">TypeScript</p>
+                  <Icon icon="skill-icons:typescript" className="text-2xl" />
+                  <p className="text-body xl:text-base">TypeScript</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Icon icon="simple-icons:microsoftsqlserver" color="red" className="big-icon" />
-                  <p className="text-body xl:text-lg">MS SQL Server</p>
+                  <Icon icon="simple-icons:microsoftsqlserver" color="red" className="text-2xl" />
+                  <p className="text-body xl:text-base">MS SQL Server</p>
                 </div>
               </div>
           </AccordionBody>
         </Accordion>
         
-        <Accordion open={open === 1} icon={IconUpdate(1, open)} className="xl:px-12 pb-10">
+        <Accordion open={open === 1} icon={IconUpdate(1, open)} className="xl:px-12 pb-10 xl:order-3">
           <AccordionHeader onClick={() => handleOpen(1)}>
             <div className="mt-5 flex justify-start items-center">
               <Icon icon="ph:briefcase-fill" className="md:big-icon small-icon" />

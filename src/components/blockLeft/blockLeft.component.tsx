@@ -61,7 +61,6 @@ const BlockRightComponent: React.FC = () => {
             <span className="mt-1 ml-2 text-body">Guadalajara, Jalisco<span className="text-accent-900 font-body text-sm">(Remote)</span></span>
           </div>
         </div>
-        {/* recordatorio, si el componente recive fecha final cambiar el basis xl:1/2 a xl:1/3 */}
         <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3 xl:order-1">
           <AccordionHeader onClick={handleAlwaysOpen}>
             <div className="flex justify-start items-center">
@@ -70,22 +69,22 @@ const BlockRightComponent: React.FC = () => {
             </div>
           </AccordionHeader>
           <AccordionBody>
-              <div className="flex flex-wrap font-body justify-around items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
-                <div className="flex flex-col items-center">
-                  <Icon icon="skill-icons:angular-light" className="big-icon" />
-                  <p className="text-body xl:text-lg">Angular</p>
+              <div className="flex flex-wrap font-body justify-center items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
+              <div className="flex flex-col items-center">
+                  <Icon icon="skill-icons:angular-light" className="text-2xl" />
+                  <p className="text-body xl:text-base">Angular</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Icon icon="skill-icons:dotnet" className="big-icon" />
-                  <p className="text-body xl:text-lg">.Net</p>
+                  <Icon icon="skill-icons:dotnet" className="text-2xl" />
+                  <p className="text-body xl:text-base">.Net</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Icon icon="skill-icons:typescript" className="big-icon" />
-                  <p className="text-body xl:text-lg">TypeScript</p>
+                  <Icon icon="skill-icons:typescript" className="text-2xl" />
+                  <p className="text-body xl:text-base">TypeScript</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Icon icon="simple-icons:microsoftsqlserver" color="red" className="big-icon" />
-                  <p className="text-body xl:text-lg">MS SQL Server</p>
+                  <Icon icon="simple-icons:microsoftsqlserver" color="red" className="text-2xl" />
+                  <p className="text-body xl:text-base">MS SQL Server</p>
                 </div>
               </div>
           </AccordionBody>
