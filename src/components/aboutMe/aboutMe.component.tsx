@@ -6,7 +6,7 @@ const AboutMeComponent: React.FC = () => {
   return (
     <>
       <div
-        className="flex flex-nowrap justify-start bg-presentation bg-cover pb-auto">
+        className="flex flex-nowrap justify-start bg-presentation bg-cover bg-opacity-50 pb-auto">
         <div className="flex flex-col items-center text-center mx-3
                         justify-center sm:px-16 xl:pl-24 2xl:mx-42">
           <p

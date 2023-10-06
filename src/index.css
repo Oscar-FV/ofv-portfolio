@@ -17,11 +17,23 @@
  }
 
  .navItem{
-   @apply text-accent-900 decoration-accent-900 decoration-2 underline-offset-4
+   @apply text-accent-900 decoration-accent-900 decoration-2 underline-offset-4 text-base
  }
 
  .navItemSelected{
    @apply underline font-subtitles text-primary-900 decoration-accent-900 decoration-2 underline-offset-2
+ }
+
+ .navItemDesktop{
+   @apply text-base transform hover:scale-150  hover:text-primary-900 hover:font-subtitles tracking-wider transition duration-100 ease-in-out
+ }
+
+ .navItemSelectedDesktop{
+  @apply underline font-subtitles text-primary-900 decoration-accent-900 decoration-2 underline-offset-2 text-lg
+}
+
+ .navIcon{
+   @apply transform hover:scale-150  hover:text-accent-900 transition duration-100 ease-in-out
  }
 
 @font-face {
