@@ -45,7 +45,7 @@ const BlockRightComponent: React.FC = () => {
         Daikin Applied
       </div>
       <div className="lg:flex lg:flex-wrap mt-1 md:mt-6 mx-6 lg:mx-3 2xl:mx-8 font-subtitles md:text-md xl:text-lg 2xl:text-xl text-sm xl:justify-around">
-      <div className="flex flex-col lg:justify-center xl:order-2">
+        <div className="flex flex-col lg:justify-center xl:order-2">
           <div className="my-6 flex flex-wrap items-center">
             <Icon icon="carbon:user-filled" className="md:big-icon small-icon" />
             <span className="mt-1 ml-2 text-body">FullStack Developer Intern</span>
@@ -53,7 +53,7 @@ const BlockRightComponent: React.FC = () => {
 
           <div className="mb-6 flex flex-wrap items-center">
             <Icon icon="ic:baseline-date-range" className="md:big-icon small-icon" />    
-            <span className="mt-1 ml-2 text-body">November 2022 - November 2022</span>    
+            <span className="mt-1 ml-2 text-body">November 22 - November 22</span>    
           </div>
 
           <div className="mb-6 flex flex-wrap items-center">
@@ -62,7 +62,7 @@ const BlockRightComponent: React.FC = () => {
           </div>
         </div>
         <Accordion open={alwaysOpen} className="lg:basis-full xl:basis-1/3 xl:order-1">
-          <AccordionHeader onClick={handleAlwaysOpen}>
+        <AccordionHeader onClick={handleAlwaysOpen}>
             <div className="flex justify-start items-center">
               <Icon icon="ph:stack-fill" className="md:big-icon small-icon" />
               <p className="ml-3 text-body  md:text-md xl:text-lg 2xl:text-xl text-sm font-subtitles ">Stack</p>
@@ -70,7 +70,7 @@ const BlockRightComponent: React.FC = () => {
           </AccordionHeader>
           <AccordionBody>
               <div className="flex flex-wrap font-body justify-center items-center px-4 gap-x-12 gap-y-3 text-xs md:text-md">
-              <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center">
                   <Icon icon="skill-icons:angular-light" className="text-2xl" />
                   <p className="text-body xl:text-base">Angular</p>
                 </div>

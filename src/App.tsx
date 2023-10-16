@@ -4,6 +4,9 @@ import BlockLeftComponent from './components/blockLeft/blockLeft.component';
 import NavBar from './components/navBar/navBar.component';
 import TitleAndDescription from './components/titleAndDescription/titleAndDescrition.component';
 
+import { Jobs } from './consts/jobs.constants';
+import React from 'react';
+
 function App() {
   return (
     <div className="App relative">
@@ -15,10 +18,17 @@ function App() {
           components, you can change the colors, fonts, breakpoints and everything
           you need.' showButton={true}/>
 
-        <div className="grid grid-cols-12 ">
-          <BlockRightComponent/>
-          <BlockLeftComponent/>
-        </div>
+
+        {Jobs.map((job, index) => (
+          <React.Fragment key={index}>
+            {index % 2 === 0 ? (
+              <BlockRightComponent job={job} />
+            ) : (
+              <BlockLeftComponent />
+            )}
+          </React.Fragment>
+        ))}
+          
     </div>
   );
 }
