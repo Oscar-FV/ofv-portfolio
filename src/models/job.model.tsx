@@ -1,9 +1,11 @@
 export default interface job{
+    id: number, 
     company: string,
     jobTitle: string, 
-    dateStart: Date,
-    dateEnd?: Date,
+    dateStart: string,
+    dateEnd?: string,
     jobLocation: string,
+    isRemote: boolean,
     stack: string[],        //name of the technologies used in the job
     iconStack: string[],    //name of the icon in fontAwesome
     descritpion: string
