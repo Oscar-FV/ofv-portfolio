@@ -1,4 +1,5 @@
 export default interface job{
+    id: number, 
     company: string,
     jobTitle: string, 
     dateStart: string,

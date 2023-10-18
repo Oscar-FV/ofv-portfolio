@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import job from "../../models/job.model";
 
-function IconUpdate(id: number, open: number) {
+function IconUpdate(open: boolean) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ function IconUpdate(id: number, open: number) {
       strokeWidth={2}
       stroke="currentColor"
       className={`${
-        id === open ? "rotate-180" : ""
+        open ? "rotate-180" : ""
       } h-5 w-5 transition-transform mt-3 text-accent`}
     >
       <path
@@ -31,17 +31,19 @@ function IconUpdate(id: number, open: number) {
 const BlockRightComponent: React.FC<{
   job: job
 }> = ({ job }) => {
-  const [open, setOpen] = React.useState(0);
+  const [open, setOpen] = React.useState(false);
   const [alwaysOpen, setAlwaysOpen] = React.useState(true);
 
+  
+
   const handleAlwaysOpen = () => setAlwaysOpen((cur) => !cur);
-  const handleOpen = (value: React.SetStateAction<number>) =>
-    setOpen(open === value ? 0 : value);
+  const handleOpen = () =>
+    setOpen((prevOpen) => !prevOpen);
 
   return (
-
-    <div className="flex max-w-[350px] mx-6 mt-20 my-10 bg-secondary rounded-xl shadow-lg shadow-accent-900/50 relative">
-      <div className="tracking-wider text-3xl text-center font-medium text-primary-900 font-titles rounded-lg py-2 -top-7 absolute px-2">
+    <div>
+    <div className="flex min-w-292 max-w-[350px] mx-6 my-5 bg-secondary rounded-xl shadow-lg shadow-accent-900/50 relative mb-10">
+      <div className="tracking-wider text-xl lg:text-2xl text-center font-medium bg-gradient-to-t from-primary-900 to-primary-50  bg-clip-text text-transparent font-titles rounded-lg py-2 -top-6 absolute mx-6">
         {job.company}
       </div>
 
@@ -102,18 +104,18 @@ const BlockRightComponent: React.FC<{
         </Accordion>
 
         <Accordion
-          open={open === 1}
-          icon={IconUpdate(1, open)}
+          open={open}
+          icon={IconUpdate(open)}
           className="pb-4"
         >
-          <AccordionHeader onClick={() => handleOpen(1)}>
+          <AccordionHeader onClick={() => handleOpen()}>
             <div className="flex justify-start items-center">
               <Icon
                 icon="ph:briefcase-fill"
                 className="md:big-icon small-icon"
               />
               <p className="ml-3 text-body text-sm font-subtitles">
-                Responsabilities
+                Responsabilities 
               </p>
             </div>
           </AccordionHeader>
@@ -124,7 +126,7 @@ const BlockRightComponent: React.FC<{
 
       </div>
 
-
+      </div>  
     </div>
   );
 };
